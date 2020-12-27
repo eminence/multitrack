@@ -1,12 +1,24 @@
 <html>
 
+    <button id="mybutton">Go</button>
+
     <script type="module">
-        import init, { greet } from "./pkg/hello_wasm.js";
+        // import init, { greet } from "./pkg/multitrack.js";
+        import * as tsm from "./pkg/index.js";
+
+        async function getHandle() {
+            const handle = await window.showDirectoryPicker();
+            
+        }
 
         async function run() {
-            const m = await init();
-            console.log(m);
-            greet();
+            // const m = await init();
+            // console.log(m);
+            // greet();
+            // console.log(tsm);
+            // tsm.hello_from_ts();
+            // tsm.install_handler(document.getElementById("mybutton"));
+            await tsm.init_webaudio(document.getElementById("mybutton"));
 
         }
         run();

@@ -16,10 +16,14 @@ default = ["console_error_panic_hook"]
 wasm-bindgen = "0.2.63"
 console_error_panic_hook = { version = "0.1.6", optional = true }
 wee_alloc = { version = "0.4.5", optional = true }
+lewton = "0.10.1"
+wasm-bindgen-futures = "0.4.19"
+js-sys = "0.3.46"
+ogg = "0.7"
 
 [dependencies.web-sys]
 version = "0.3"
-features = ["Document", "Window"]
+features = ["Document", "Window", "File", "Blob", "FileReader", "ReadableStream", "console"]
 
 
 [profile.release]
